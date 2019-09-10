@@ -23,12 +23,15 @@ function getDateFromDayYmd(day_ymd: number) {
   return new Date(`${Math.floor(day_ymd / 10000)}-${day_m}-${day_d}T09:00:00+09:00`);
 }
 
-function getBusinessDay(date: Date, days_to_go: number, set_date_value: 1 | -1) {
+function getBusinessDay(
+  { date, days_to_go, set_date_increased }:
+    { date: Date, days_to_go: number, set_date_increased: boolean },
+) {
   if (days_to_go < 1) {
     throw new Error(`second parameter value should be positive value`);
   }
   while (days_to_go) {
-    date.setDate(date.getDate() + set_date_value);
+    date.setDate(date.getDate() + (set_date_increased ? 1 : -1));
     const day = date.getDay();
     if (day === 0 || day === 6) {
       continue;
@@ -50,21 +53,37 @@ function getBusinessDay(date: Date, days_to_go: number, set_date_value: 1 | -1) 
 }
 
 export function getNextKoreanBusinessDayYmd(day_ymd: number, days_after: number): number {
-  return getBusinessDay(getDateFromDayYmd(day_ymd), days_after, 1);
+  return getBusinessDay({
+    date: getDateFromDayYmd(day_ymd),
+    days_to_go: days_after,
+    set_date_increased: true,
+  });
 }
 
 export function getPreviousKoreanBusinessDayYmd(day_ymd: number, days_before: number): number {
-  return getBusinessDay(getDateFromDayYmd(day_ymd), days_before, -1);
+  return getBusinessDay({
+    date: getDateFromDayYmd(day_ymd),
+    days_to_go: days_before,
+    set_date_increased: false,
+  });
 }
 
 export function getNextKoreanBusinessDayYmdByUtcDate(date: Date, days_after: number): number {
   date = new Date(date);
   date.setUTCHours(date.getUTCHours() + 9);
-  return getBusinessDay(date, days_after, 1);
+  return getBusinessDay({
+    date,
+    days_to_go: days_after,
+    set_date_increased: true,
+  });
 }
 
 export function getPreviousKoreanBusinessDayYmdByUtcDate(date: Date, days_before: number): number {
   date = new Date(date);
   date.setUTCHours(date.getUTCHours() + 9);
-  return getBusinessDay(date, days_before, -1);
+  return getBusinessDay({
+    date,
+    days_to_go: days_before,
+    set_date_increased: false,
+  });
 }
