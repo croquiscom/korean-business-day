@@ -38,5 +38,37 @@ describe('getNextKoreanBusinessDayYmd', () => {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
     });
+
+    it('day_ymd에 유효하지 않은 "값"을 입력한 경우', () => {
+      try {
+        getNextKoreanBusinessDayYmd(2021, 1);
+      } catch (e) {
+        expect(e.message).to.eql(`invalid day_ymd: 2021`);
+      }
+    });
+
+    it('day_ymd에 유효하지 않은 "년"을 입력한 경우', () => {
+      try {
+        getNextKoreanBusinessDayYmd(20210101, 1);
+      } catch (e) {
+        expect(e.message).to.eql(`invalid day_ymd: 20210101`);
+      }
+    });
+
+    it('day_ymd에 유효하지 않은 "월"을 입력한 경우', () => {
+      try {
+        getNextKoreanBusinessDayYmd(20210001, 1);
+      } catch (e) {
+        expect(e.message).to.eql(`invalid day_ymd: 20210001`);
+      }
+    });
+
+    it('day_ymd에 유효하지 않은 "일"을 입력한 경우', () => {
+      try {
+        getNextKoreanBusinessDayYmd(20190532, 1);
+      } catch (e) {
+        expect(e.message).to.eql(`invalid day_ymd: 20190532`);
+      }
+    });
   });
 });

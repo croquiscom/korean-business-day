@@ -15,6 +15,9 @@ function getYmdByDate(date: Date): { year: number, month: number, day: number } 
 }
 
 function getDateFromDayYmd(day_ymd: number) {
+  if (!/^(2019|2020)(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
+    throw new Error(`invalid day_ymd: ${day_ymd}`);
+  }
   const day_m = (`0${Math.floor(day_ymd / 100 % 100)}`).slice(-2);
   const day_d = (`0${Math.floor(day_ymd % 100)}`).slice(-2);
   return new Date(`${Math.floor(day_ymd / 10000)}-${day_m}-${day_d}T09:00:00+09:00`);
