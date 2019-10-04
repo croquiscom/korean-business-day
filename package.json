@@ -13,7 +13,8 @@
   },
   "homepage": "https://github.com/croquiscom/korean-business-day",
   "scripts": {
-    "build": "rimraf lib && tsc -p ./src/tsconfig.build.json",
+    "prepublishOnly": "npm run lint && npm run build",
+    "build": "rimraf lib && tsc -p src/tsconfig.build.json",
     "lint": "tslint -p tsconfig.json",
     "test:type": "tsc --noEmit",
     "test:unit": "mocha --require ts-node/register/transpile-only ./test/*.ts",
