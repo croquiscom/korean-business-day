@@ -1,6 +1,6 @@
 {
   "name": "korean-business-day",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Node module for korean business days",
   "main": "./lib",
   "types": "./lib/index.d.ts",
