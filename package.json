@@ -21,12 +21,12 @@
     "test": "npm run test:type && npm run lint && npm run test:unit --"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.4",
+    "@types/chai": "^4.2.5",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "rimraf": "^3.0.0",
-    "ts-node": "^8.4.1",
+    "ts-node": "^8.5.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2"
   }
