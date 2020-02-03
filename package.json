@@ -21,7 +21,7 @@
     "test": "npm run test:type && npm run lint && npm run test:unit --"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.7",
+    "@types/chai": "^4.2.8",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
