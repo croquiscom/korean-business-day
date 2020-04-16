@@ -19,6 +19,7 @@ const HOLIDAYS_2020: IYearHolidays = {
     30: true, // 부처님 오신날
   },
   5: {
+    1: true, // 근로자의 날
     5: true, // 어린이날
   },
   6: {
