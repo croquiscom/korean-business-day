@@ -52,6 +52,15 @@ function getBusinessDay(
   return result.year * 10000 + result.month * 100 + result.day;
 }
 
+export function isHoliday(date: Date): boolean {
+  date = new Date(date);
+  date.setUTCHours(date.getUTCHours() + 9);
+  const day = date.getDay();
+  const ymd = getYmdByDate(date);
+  const result = (KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day] !== undefined);
+  return (day === 0 || day === 6) || result
+}
+
 export function getNextKoreanBusinessDayYmd(day_ymd: number, days_after: number): number {
   return getBusinessDay({
     date: getDateFromDayYmd(day_ymd),
