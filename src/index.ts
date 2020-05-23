@@ -52,6 +52,11 @@ function getBusinessDay(
   return result.year * 10000 + result.month * 100 + result.day;
 }
 
+/**
+ * 휴일 여부를 반환합니다.
+ * @param date 살펴볼 날짜
+ * @returns 휴일 여부
+ */
 export function isHoliday(date: Date): boolean {
   date = new Date(date);
   date.setUTCHours(date.getUTCHours() + 9);
@@ -61,6 +66,12 @@ export function isHoliday(date: Date): boolean {
   return (day === 0 || day === 6) || result
 }
 
+/**
+ * YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
+ * @param day_ymd 기준일(YYYYMMDD 형태의 숫자)
+ * @param days_after n일 후
+ * @returns 다음 영업일(YYYYMMDD 형태의 숫자)
+ */
 export function getNextKoreanBusinessDayYmd(day_ymd: number, days_after: number): number {
   return getBusinessDay({
     date: getDateFromDayYmd(day_ymd),
@@ -69,6 +80,12 @@ export function getNextKoreanBusinessDayYmd(day_ymd: number, days_after: number)
   });
 }
 
+/**
+ * YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
+ * @param day_ymd 기준일(YYYYMMDD 형태의 숫자)
+ * @param days_after n일 전
+ * @returns 이전 영업일(YYYYMMDD 형태의 숫자)
+ */
 export function getPreviousKoreanBusinessDayYmd(day_ymd: number, days_before: number): number {
   return getBusinessDay({
     date: getDateFromDayYmd(day_ymd),
@@ -77,6 +94,12 @@ export function getPreviousKoreanBusinessDayYmd(day_ymd: number, days_before: nu
   });
 }
 
+/**
+ * UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
+ * @param date 기준일(UTC 시각)
+ * @param days_after n일 후
+ * @returns 다음 영업일(YYYYMMDD 형태의 숫자)
+ */
 export function getNextKoreanBusinessDayYmdByUtcDate(date: Date, days_after: number): number {
   date = new Date(date);
   date.setUTCHours(date.getUTCHours() + 9);
@@ -87,6 +110,12 @@ export function getNextKoreanBusinessDayYmdByUtcDate(date: Date, days_after: num
   });
 }
 
+/**
+ * UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
+ * @param date 기준일(UTC 시각)
+ * @param days_after n일 전
+ * @returns 이전 영업일(YYYYMMDD 형태의 숫자)
+ */
 export function getPreviousKoreanBusinessDayYmdByUtcDate(date: Date, days_before: number): number {
   date = new Date(date);
   date.setUTCHours(date.getUTCHours() + 9);

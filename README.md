@@ -1,6 +1,36 @@
 [![npm version](https://badge.fury.io/js/korean-business-day.svg)](http://badge.fury.io/js/korean-business-day)
 [![Build Status](https://travis-ci.org/croquiscom/korean-business-day.svg?branch=master)](https://travis-ci.org/croquiscom/korean-business-day)
 
-## korean-business-day
+korean-business-day는 영업일(한국 기준) 계산을 도와주는 모듈입니다.
 
-Node module for korean business days
+# 함수 목록
+
+## getNextKoreanBusinessDayYmd
+YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
+
+## getPreviousKoreanBusinessDayYmd
+YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
+
+## getNextKoreanBusinessDayYmdByUtcDate
+UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
+
+## getPreviousKoreanBusinessDayYmdByUtcDate
+UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
+
+## isHoliday
+휴일 여부를 반환합니다.
+
+# 작업 순서
+
+1. 소스를 수정하고 테스트 코드를 작성합니다.
+2. `npm test`로 동작 여부를 확인합니다.
+3. `npm run build`로 배포용 소스를 만들어냅니다.
+4. `npm version {major|minor|patch}`로 버전을 올립니다.
+5. `npm publish`로 모듈을 배포합니다.
+
+# 라이브러리 이력
+[GitHub Releases](https://github.com/croquiscom/korean-business-day/releases)에서 이력을 확인할 수 있습니다.
+
+# 라이선스
+
+MIT licenses. [LICENSE](https://github.com/croquiscom/korean-business-day/blob/master/LICENSE)를 참고하세요.
