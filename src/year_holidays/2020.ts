@@ -30,6 +30,7 @@ const HOLIDAYS_2020: IYearHolidays = {
   },
   8: {
     15: true, // 광복절
+    17: true, // 광복절 대체 임시공휴일
   },
   9: {
     30: true, // 추석 연휴
