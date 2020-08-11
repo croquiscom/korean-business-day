@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/korean-business-day.svg)](http://badge.fury.io/js/korean-business-day)
-[![Build Status](https://travis-ci.org/croquiscom/korean-business-day.svg?branch=master)](https://travis-ci.org/croquiscom/korean-business-day)
+![test](https://github.com/croquiscom/korean-business-day/workflows/test/badge.svg)
 
 korean-business-day는 영업일(한국 기준) 계산을 도와주는 모듈입니다.
 
