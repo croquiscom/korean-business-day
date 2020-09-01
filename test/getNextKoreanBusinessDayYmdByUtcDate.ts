@@ -18,15 +18,17 @@ describe('getNextKoreanBusinessDayYmdByUtcDate', () => {
   describe('errors', () => {
     it('days_after만큼 넘기는 중에 데이터가 없는 해로 넘어가는 경우', () => {
       try {
-        getNextKoreanBusinessDayYmdByUtcDate(new Date(2019, 11, 20), 9);
+        getNextKoreanBusinessDayYmdByUtcDate(new Date(2021, 11, 20), 12);
+        throw new Error('must throw an error');
       } catch (e) {
-        expect(e.message).to.eql('year 2021 data not exists');
+        expect(e.message).to.eql('year 2022 data not exists');
       }
     });
 
     it('days_after에 0이 입력된 경우', () => {
       try {
         getNextKoreanBusinessDayYmdByUtcDate(new Date(2019, 4, 31), 0);
+        throw new Error('must throw an error');
       } catch (e) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
@@ -35,6 +37,7 @@ describe('getNextKoreanBusinessDayYmdByUtcDate', () => {
     it('days_after에 음수가 입력된 경우', () => {
       try {
         getNextKoreanBusinessDayYmdByUtcDate(new Date(2019, 4, 31), -31);
+        throw new Error('must throw an error');
       } catch (e) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
