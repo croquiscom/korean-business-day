@@ -48,4 +48,4 @@ const HOLIDAYS_2020: IYearHolidays = {
   },
 };
 
-export default HOLIDAYS_2020;
+export { HOLIDAYS_2020 };

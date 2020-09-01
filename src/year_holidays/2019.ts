@@ -46,4 +46,4 @@ const HOLIDAYS_2019: IYearHolidays = {
   },
 };
 
-export default HOLIDAYS_2019;
+export { HOLIDAYS_2019 };
