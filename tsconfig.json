@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "experimentalDecorators": true,
-    "strict": true,
-    "stripInternal": true,
-    "esModuleInterop": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "stripInternal": true,
+    "declaration": true,
+    "module": "CommonJS",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
     "lib": [
       "es6"
     ]
