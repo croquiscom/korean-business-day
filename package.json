@@ -29,10 +29,23 @@
     "@typescript-eslint/parser": "^4.0.1",
     "chai": "^4.2.0",
     "eslint": "^7.8.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "mocha": "^8.1.1",
+    "post-merge-install": "^0.4.0",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
     "typedoc": "^0.18.0",
     "typescript": "^3.9.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "post-merge-install",
+      "post-rebase": "post-merge-install"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": "eslint"
   }
 }
