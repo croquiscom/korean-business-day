@@ -24,13 +24,10 @@ UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 
 
 1. 소스를 수정하고 테스트 코드를 작성합니다.
 2. `npm test`로 동작 여부를 확인합니다.
-3. `npm run build`로 배포용 소스를 만들어냅니다.
-4. `npm version {major|minor|patch}`로 버전을 올립니다.
-5. `npm publish`로 모듈을 배포합니다.
+3. release workflow를 사용해 모듈을 배포합니다.
 
 # 라이브러리 이력
 [GitHub Releases](https://github.com/croquiscom/korean-business-day/releases)에서 이력을 확인할 수 있습니다.
 
 # 라이선스
-
 MIT licenses. [LICENSE](https://github.com/croquiscom/korean-business-day/blob/master/LICENSE)를 참고하세요.
