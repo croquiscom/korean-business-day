@@ -3,24 +3,37 @@
 
 korean-business-day는 영업일(한국 기준) 계산을 도와주는 모듈입니다.
 
-# 함수 목록
+## 함수 목록
 
-## getNextKoreanBusinessDayYmd
+### getNextKoreanBusinessDayYmd
+
 YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
 
-## getPreviousKoreanBusinessDayYmd
+반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.
+
+### getPreviousKoreanBusinessDayYmd
+
 YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
 
-## getNextKoreanBusinessDayYmdByUtcDate
+반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.
+
+### getNextKoreanBusinessDayYmdByUtcDate
+
 UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 후를 반환합니다.
 
-## getPreviousKoreanBusinessDayYmdByUtcDate
+반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.
+
+### getPreviousKoreanBusinessDayYmdByUtcDate
+
 UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 전을 반환합니다.
 
-## isHoliday
-휴일 여부를 반환합니다.
+반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.
 
-# 작업 순서
+### isHoliday
+
+주어진 시각(UTC 시간대)의 휴일 여부를 반환합니다.
+
+## 작업 순서
 
 1. 소스를 수정하고 테스트 코드를 작성합니다.
 2. `npm test`로 동작 여부를 확인합니다.
