@@ -64,7 +64,7 @@ export function isHoliday(date: Date): boolean {
   const day = date.getDay();
   const ymd = getYmdByDate(date);
   const result = (KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day] !== undefined);
-  return (day === 0 || day === 6) || result
+  return (day === 0 || day === 6) || result;
 }
 
 /**
