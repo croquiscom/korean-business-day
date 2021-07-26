@@ -6,9 +6,4 @@ interface IYearHolidays {
   [month: number]: { [day: number]: boolean };
 }
 
-export {
-  IYearHolidays,
-  HOLIDAYS_2019,
-  HOLIDAYS_2020,
-  HOLIDAYS_2021,
-};
+export { IYearHolidays, HOLIDAYS_2019, HOLIDAYS_2020, HOLIDAYS_2021 };

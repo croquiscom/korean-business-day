@@ -40,7 +40,9 @@ UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 
 3. release workflow를 사용해 모듈을 배포합니다.
 
 # 라이브러리 이력
+
 [GitHub Releases](https://github.com/croquiscom/korean-business-day/releases)에서 이력을 확인할 수 있습니다.
 
 # 라이선스
+
 MIT licenses. [LICENSE](https://github.com/croquiscom/korean-business-day/blob/master/LICENSE)를 참고하세요.

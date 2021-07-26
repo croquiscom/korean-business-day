@@ -12,9 +12,7 @@ const HOLIDAYS_2019: IYearHolidays = {
   3: {
     1: true, // 삼일절
   },
-  4: {
-
-  },
+  4: {},
   5: {
     5: true, // 어린이날
     6: true, // 어린이날 대체휴일
@@ -23,9 +21,7 @@ const HOLIDAYS_2019: IYearHolidays = {
   6: {
     6: true, // 현충일
   },
-  7: {
-
-  },
+  7: {},
   8: {
     15: true, // 광복절
   },
@@ -38,9 +34,7 @@ const HOLIDAYS_2019: IYearHolidays = {
     3: true, // 개천절
     9: true, // 한글날
   },
-  11: {
-
-  },
+  11: {},
   12: {
     25: true, // 크리스마스
   },

@@ -2,16 +2,10 @@
   "env": {
     "node": true
   },
-  "extends": [
-    "@croquiscom/eslint-config/requiring-type-checking"
-  ],
-  "ignorePatterns": [
-    "lib"
-  ],
+  "extends": ["@croquiscom/eslint-config/requiring-type-checking"],
+  "ignorePatterns": ["lib"],
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "project": ["./tsconfig.json"]
   },
   "rules": {
     "import/export": "off",

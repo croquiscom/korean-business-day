@@ -7,7 +7,7 @@ const KOREAN_HOLIDAYS: { [year: number]: IYearHolidays } = {
   2021: HOLIDAYS_2021,
 };
 
-function getYmdByDate(date: Date): { year: number, month: number, day: number } {
+function getYmdByDate(date: Date): { year: number; month: number; day: number } {
   return {
     day: date.getDate(),
     month: date.getMonth() + 1,
@@ -19,15 +19,20 @@ function getDateFromDayYmd(day_ymd: number) {
   if (!/^(2019|2020|2021)(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
     throw new Error(`invalid day_ymd: ${day_ymd}`);
   }
-  const day_m = (`0${Math.floor(day_ymd / 100 % 100)}`).slice(-2);
-  const day_d = (`0${Math.floor(day_ymd % 100)}`).slice(-2);
+  const day_m = `0${Math.floor((day_ymd / 100) % 100)}`.slice(-2);
+  const day_d = `0${Math.floor(day_ymd % 100)}`.slice(-2);
   return new Date(`${Math.floor(day_ymd / 10000)}-${day_m}-${day_d}T09:00:00+09:00`);
 }
 
-function getBusinessDay(
-  { date, days_to_go, set_date_increased }:
-    { date: Date, days_to_go: number, set_date_increased: boolean },
-) {
+function getBusinessDay({
+  date,
+  days_to_go,
+  set_date_increased,
+}: {
+  date: Date;
+  days_to_go: number;
+  set_date_increased: boolean;
+}) {
   if (days_to_go < 1) {
     throw new Error(`second parameter value should be positive value`);
   }
@@ -63,8 +68,8 @@ export function isHoliday(date: Date): boolean {
   date.setUTCHours(date.getUTCHours() + 9);
   const day = date.getDay();
   const ymd = getYmdByDate(date);
-  const result = (KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day] !== undefined);
-  return (day === 0 || day === 6) || result;
+  const result = KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day] !== undefined;
+  return day === 0 || day === 6 || result;
 }
 
 /**
