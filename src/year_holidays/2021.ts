@@ -24,6 +24,7 @@ const HOLIDAYS_2021: IYearHolidays = {
   7: {},
   8: {
     15: true, // 광복절
+    16: true, // 광복절 대체공휴일
   },
   9: {
     20: true, // 추석 연휴
@@ -32,11 +33,14 @@ const HOLIDAYS_2021: IYearHolidays = {
   },
   10: {
     3: true, // 개천절
+    4: true, // 개천절 대체공휴일
     9: true, // 한글날
+    11: true, // 한글날 대체공휴일
   },
   11: {},
   12: {
     25: true, // 성탄절
+    27: true, // 성탄절 대체공휴일
   },
 };
 
