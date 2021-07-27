@@ -40,7 +40,6 @@ const HOLIDAYS_2021: IYearHolidays = {
   11: {},
   12: {
     25: true, // 성탄절
-    27: true, // 성탄절 대체공휴일
   },
 };
 
