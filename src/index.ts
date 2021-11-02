@@ -1,11 +1,4 @@
-import { HOLIDAYS_2019, HOLIDAYS_2020, HOLIDAYS_2021, IYearHolidays } from './year_holidays';
-
-// 토, 일요일 정보는 포함하지 않음
-const KOREAN_HOLIDAYS: { [year: number]: IYearHolidays } = {
-  2019: HOLIDAYS_2019,
-  2020: HOLIDAYS_2020,
-  2021: HOLIDAYS_2021,
-};
+import { KOREAN_HOLIDAYS } from './year_holidays';
 
 function getYmdByDate(date: Date): { year: number; month: number; day: number } {
   return {
@@ -16,7 +9,7 @@ function getYmdByDate(date: Date): { year: number; month: number; day: number } 
 }
 
 function getDateFromDayYmd(day_ymd: number) {
-  if (!/^(2019|2020|2021)(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
+  if (!/^(2019|2020|2021|2022)(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
     throw new Error(`invalid day_ymd: ${day_ymd}`);
   }
   const day_m = `0${Math.floor((day_ymd / 100) % 100)}`.slice(-2);

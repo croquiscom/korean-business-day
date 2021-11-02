@@ -1,4 +1,4 @@
-import { IYearHolidays } from '.';
+import { IYearHolidays } from './types';
 
 const HOLIDAYS_2021: IYearHolidays = {
   1: {

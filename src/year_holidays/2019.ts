@@ -1,4 +1,4 @@
-import { IYearHolidays } from '.';
+import { IYearHolidays } from './types';
 
 const HOLIDAYS_2019: IYearHolidays = {
   1: {

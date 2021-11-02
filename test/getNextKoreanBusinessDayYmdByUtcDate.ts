@@ -18,10 +18,10 @@ describe('getNextKoreanBusinessDayYmdByUtcDate', () => {
   describe('errors', () => {
     it('days_after만큼 넘기는 중에 데이터가 없는 해로 넘어가는 경우', () => {
       try {
-        getNextKoreanBusinessDayYmdByUtcDate(new Date(2021, 11, 20), 12);
+        getNextKoreanBusinessDayYmdByUtcDate(new Date(2022, 11, 20), 12);
         throw new Error('must throw an error');
       } catch (e: any) {
-        expect(e.message).to.eql('year 2022 data not exists');
+        expect(e.message).to.eql('year 2023 data not exists');
       }
     });
 
