@@ -19,7 +19,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20211220, 12);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql('year 2022 data not exists');
       }
     });
@@ -28,7 +28,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20190531, 0);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
     });
@@ -37,7 +37,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20190531, -31);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
     });
@@ -46,7 +46,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(2021, 1);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`invalid day_ymd: 2021`);
       }
     });
@@ -55,7 +55,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20220101, 1);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`invalid day_ymd: 20220101`);
       }
     });
@@ -64,7 +64,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20210001, 1);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`invalid day_ymd: 20210001`);
       }
     });
@@ -73,7 +73,7 @@ describe('getNextKoreanBusinessDayYmd', () => {
       try {
         getNextKoreanBusinessDayYmd(20190532, 1);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`invalid day_ymd: 20190532`);
       }
     });

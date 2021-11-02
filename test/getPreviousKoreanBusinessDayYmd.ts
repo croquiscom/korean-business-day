@@ -19,7 +19,7 @@ describe('getPreviousKoreanBusinessDayYmd', () => {
       try {
         getPreviousKoreanBusinessDayYmd(20190111, 9);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql('year 2018 data not exists');
       }
     });
@@ -28,7 +28,7 @@ describe('getPreviousKoreanBusinessDayYmd', () => {
       try {
         getPreviousKoreanBusinessDayYmd(20190531, 0);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
     });
@@ -37,7 +37,7 @@ describe('getPreviousKoreanBusinessDayYmd', () => {
       try {
         getPreviousKoreanBusinessDayYmd(20190531, -31);
         throw new Error('must throw an error');
-      } catch (e) {
+      } catch (e: any) {
         expect(e.message).to.eql(`second parameter value should be positive value`);
       }
     });
