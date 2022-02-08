@@ -15,15 +15,6 @@ describe('getPreviousKoreanBusinessDayYmd', () => {
   });
 
   describe('errors', () => {
-    it('days_before만큼 넘기는 중에 데이터가 없는 해로 넘어가는 경우', () => {
-      try {
-        getPreviousKoreanBusinessDayYmd(20190111, 9);
-        throw new Error('must throw an error');
-      } catch (e: any) {
-        expect(e.message).to.eql('year 2018 data not exists');
-      }
-    });
-
     it('days_before에 0이 입력된 경우', () => {
       try {
         getPreviousKoreanBusinessDayYmd(20190531, 0);

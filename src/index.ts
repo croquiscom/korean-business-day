@@ -1,4 +1,4 @@
-import { KOREAN_HOLIDAYS } from './year_holidays';
+import { HOLIDAYS_FALLBACK, KOREAN_HOLIDAYS } from './year_holidays';
 
 function getYmdByDate(date: Date): { year: number; month: number; day: number } {
   return {
@@ -9,7 +9,7 @@ function getYmdByDate(date: Date): { year: number; month: number; day: number } 
 }
 
 function getDateFromDayYmd(day_ymd: number) {
-  if (!/^(2019|2020|2021|2022)(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
+  if (!/^20[0-9][0-9](0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
     throw new Error(`invalid day_ymd: ${day_ymd}`);
   }
   const day_m = `0${Math.floor((day_ymd / 100) % 100)}`.slice(-2);
@@ -36,13 +36,11 @@ function getBusinessDay({
       continue;
     }
     const ymd = getYmdByDate(date);
-    if (!KOREAN_HOLIDAYS[ymd.year]) {
-      throw new Error(`year ${ymd.year} data not exists`);
-    }
-    if (!KOREAN_HOLIDAYS[ymd.year][ymd.month]) {
+    const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] || HOLIDAYS_FALLBACK;
+    if (!holiday_of_year[ymd.month]) {
       throw new Error(`month ${ymd.month} data not exists`);
     }
-    if (KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day]) {
+    if (holiday_of_year[ymd.month][ymd.day]) {
       continue;
     }
     days_to_go--;
@@ -61,7 +59,8 @@ export function isHoliday(date: Date): boolean {
   date.setUTCHours(date.getUTCHours() + 9);
   const day = date.getDay();
   const ymd = getYmdByDate(date);
-  const result = KOREAN_HOLIDAYS[ymd.year][ymd.month][ymd.day] !== undefined;
+  const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] || HOLIDAYS_FALLBACK;
+  const result = holiday_of_year[ymd.month][ymd.day] !== undefined;
   return day === 0 || day === 6 || result;
 }
 

@@ -11,3 +11,5 @@ export const KOREAN_HOLIDAYS: { [year: number]: IYearHolidays } = {
   2021: HOLIDAYS_2021,
   2022: HOLIDAYS_2022,
 };
+
+export { HOLIDAYS_FALLBACK } from './fallback';

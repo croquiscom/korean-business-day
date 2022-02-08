@@ -34,18 +34,14 @@ describe('getNextKoreanBusinessDayYmd', () => {
       expect(getNextKoreanBusinessDayYmd(20220531, 4)).to.eql(20220608);
       expect(getNextKoreanBusinessDayYmd(20220915, 17)).to.eql(20221012);
     });
+
+    it('fallback year', () => {
+      expect(getNextKoreanBusinessDayYmd(20500531, 4)).to.eql(20500607);
+      expect(getNextKoreanBusinessDayYmd(20500915, 17)).to.eql(20501011);
+    });
   });
 
   describe('errors', () => {
-    it('days_after만큼 넘기는 중에 데이터가 없는 해로 넘어가는 경우', () => {
-      try {
-        getNextKoreanBusinessDayYmd(20221220, 12);
-        throw new Error('must throw an error');
-      } catch (e: any) {
-        expect(e.message).to.eql('year 2023 data not exists');
-      }
-    });
-
     it('days_after에 0이 입력된 경우', () => {
       try {
         getNextKoreanBusinessDayYmd(20190531, 0);
@@ -75,10 +71,10 @@ describe('getNextKoreanBusinessDayYmd', () => {
 
     it('day_ymd에 유효하지 않은 "년"을 입력한 경우', () => {
       try {
-        getNextKoreanBusinessDayYmd(20230101, 1);
+        getNextKoreanBusinessDayYmd(19990101, 1);
         throw new Error('must throw an error');
       } catch (e: any) {
-        expect(e.message).to.eql(`invalid day_ymd: 20230101`);
+        expect(e.message).to.eql(`invalid day_ymd: 19990101`);
       }
     });
 
