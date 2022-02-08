@@ -1,0 +1,56 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>korean-business-day</title><meta name="description" content="Documentation for korean-business-day"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">korean-business-day</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>korean-business-day</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography"><p><a href="http://badge.fury.io/js/korean-business-day"><img src="https://badge.fury.io/js/korean-business-day.svg" alt="npm version"></a>
+<img src="https://github.com/croquiscom/korean-business-day/workflows/test/badge.svg" alt="test"></p>
+<p>korean-business-day는 영업일(한국 기준) 계산을 도와주는 모듈입니다.</p>
+
+<a href="#함수-목록" id="함수-목록" style="color: inherit; text-decoration: none;">
+  <h2>함수 목록</h2>
+</a>
+
+<a href="#getnextkoreanbusinessdayymd" id="getnextkoreanbusinessdayymd" style="color: inherit; text-decoration: none;">
+  <h3>getNextKoreanBusinessDayYmd</h3>
+</a>
+<p>YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 후를 반환합니다.</p>
+<p>반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.</p>
+
+<a href="#getpreviouskoreanbusinessdayymd" id="getpreviouskoreanbusinessdayymd" style="color: inherit; text-decoration: none;">
+  <h3>getPreviousKoreanBusinessDayYmd</h3>
+</a>
+<p>YYYYMMDD 형태의 숫자를 입력으로 받아 영업일 기준 n일 전을 반환합니다.</p>
+<p>반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.</p>
+
+<a href="#getnextkoreanbusinessdayymdbyutcdate" id="getnextkoreanbusinessdayymdbyutcdate" style="color: inherit; text-decoration: none;">
+  <h3>getNextKoreanBusinessDayYmdByUtcDate</h3>
+</a>
+<p>UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 후를 반환합니다.</p>
+<p>반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.</p>
+
+<a href="#getpreviouskoreanbusinessdayymdbyutcdate" id="getpreviouskoreanbusinessdayymdbyutcdate" style="color: inherit; text-decoration: none;">
+  <h3>getPreviousKoreanBusinessDayYmdByUtcDate</h3>
+</a>
+<p>UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 전을 반환합니다.</p>
+<p>반환값은 YYYYMMDD 형태의 날짜(숫자형)입니다.</p>
+
+<a href="#isholiday" id="isholiday" style="color: inherit; text-decoration: none;">
+  <h3>isHoliday</h3>
+</a>
+<p>주어진 시각(UTC 시간대)의 휴일 여부를 반환합니다.</p>
+
+<a href="#작업-순서" id="작업-순서" style="color: inherit; text-decoration: none;">
+  <h2>작업 순서</h2>
+</a>
+<ol>
+<li>소스를 수정하고 테스트 코드를 작성합니다.</li>
+<li><code>npm test</code>로 동작 여부를 확인합니다.</li>
+<li>release workflow를 사용해 모듈을 배포합니다.</li>
+</ol>
+
+<a href="#라이브러리-이력" id="라이브러리-이력" style="color: inherit; text-decoration: none;">
+  <h1>라이브러리 이력</h1>
+</a>
+<p><a href="https://github.com/croquiscom/korean-business-day/releases">GitHub Releases</a>에서 이력을 확인할 수 있습니다.</p>
+
+<a href="#라이선스" id="라이선스" style="color: inherit; text-decoration: none;">
+  <h1>라이선스</h1>
+</a>
+<p>MIT licenses. <a href="https://github.com/croquiscom/korean-business-day/blob/master/LICENSE">LICENSE</a>를 참고하세요.</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-function"><a href="modules.html#getNextKoreanBusinessDayYmd" class="tsd-kind-icon">get<wbr/>Next<wbr/>Korean<wbr/>Business<wbr/>Day<wbr/>Ymd</a></li><li class="tsd-kind-function"><a href="modules.html#getNextKoreanBusinessDayYmdByUtcDate" class="tsd-kind-icon">get<wbr/>Next<wbr/>Korean<wbr/>Business<wbr/>Day<wbr/>Ymd<wbr/>By<wbr/>Utc<wbr/>Date</a></li><li class="tsd-kind-function"><a href="modules.html#getPreviousKoreanBusinessDayYmd" class="tsd-kind-icon">get<wbr/>Previous<wbr/>Korean<wbr/>Business<wbr/>Day<wbr/>Ymd</a></li><li class="tsd-kind-function"><a href="modules.html#getPreviousKoreanBusinessDayYmdByUtcDate" class="tsd-kind-icon">get<wbr/>Previous<wbr/>Korean<wbr/>Business<wbr/>Day<wbr/>Ymd<wbr/>By<wbr/>Utc<wbr/>Date</a></li><li class="tsd-kind-function"><a href="modules.html#isHoliday" class="tsd-kind-icon">is<wbr/>Holiday</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
