@@ -7,6 +7,7 @@ git clone -b gh-pages `git remote get-url origin` gh-pages
 cd gh-pages
 git rm -rf .
 mv ../docs/* .
+mv ../docs/.* .
 rmdir ../docs
 git add --all
 git commit -m 'publish documentation'
