@@ -32,6 +32,7 @@
     "lint-staged": "^12.3.3",
     "mocha": "^9.2.0",
     "post-merge-install": "^0.4.0",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.5.0",
     "typedoc": "^0.22.11",
@@ -45,6 +46,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,ts}": "eslint"
+    "**/*.{js,ts}": "eslint",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

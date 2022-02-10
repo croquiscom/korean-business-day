@@ -4,8 +4,7 @@ const HOLIDAYS_FALLBACK: IYearHolidays = {
   1: {
     1: true, // 새해
   },
-  2: {
-  },
+  2: {},
   3: {
     1: true, // 삼일절
   },
@@ -21,8 +20,7 @@ const HOLIDAYS_FALLBACK: IYearHolidays = {
   8: {
     15: true, // 광복절
   },
-  9: {
-  },
+  9: {},
   10: {
     3: true, // 개천절
     9: true, // 한글날
