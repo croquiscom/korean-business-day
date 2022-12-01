@@ -1,6 +1,6 @@
 import { IYearHolidays } from './types';
 
-const HOLIDAYS_2021: IYearHolidays = {
+export const HOLIDAYS_2021: IYearHolidays = {
   1: {
     1: true, // 신정
   },
@@ -42,5 +42,3 @@ const HOLIDAYS_2021: IYearHolidays = {
     25: true, // 성탄절
   },
 };
-
-export { HOLIDAYS_2021 };
