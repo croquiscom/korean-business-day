@@ -7,7 +7,6 @@
     "stripInternal": true,
     "declaration": true,
     "module": "CommonJS",
-    "experimentalDecorators": true,
     "esModuleInterop": true,
     "lib": ["es6"]
   }

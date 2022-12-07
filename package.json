@@ -8,6 +8,8 @@
     "type": "git",
     "url": "https://github.com/croquiscom/korean-business-day.git"
   },
+  "author": "Sangmin Yoon <simon.yoon@kakaostyle.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/croquiscom/korean-business-day/issues"
   },
