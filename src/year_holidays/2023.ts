@@ -17,6 +17,7 @@ export const HOLIDAYS_2023: IYearHolidays = {
     1: true, // 근로자의 날
     5: true, // 어린이날
     27: true, // 부처님 오신날
+    29: true, // 부처님 오신날 대체공휴일
   },
   6: {
     6: true, // 현충일
