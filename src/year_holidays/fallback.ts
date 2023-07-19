@@ -1,4 +1,4 @@
-import { IYearHolidays } from './types';
+import { IYearHolidays } from './types.js';
 
 const HOLIDAYS_FALLBACK: IYearHolidays = {
   1: {

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { getPreviousKoreanBusinessDayYmdByUtcDate } from '../src';
+import { getPreviousKoreanBusinessDayYmdByUtcDate } from '../src/index.js';
 
 describe('getPreviousKoreanBusinessDayYmdByUtcDate', () => {
   it('day_ymd에서 days_before일 이전의 영업일 YMD를 구한다.', () => {

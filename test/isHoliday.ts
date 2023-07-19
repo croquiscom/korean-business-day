@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { isHoliday } from '../src';
+import { isHoliday } from '../src/index.js';
 
 function parse(str: string) {
   const y = Number(str.substr(0, 4));

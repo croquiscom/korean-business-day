@@ -1,4 +1,4 @@
-import { HOLIDAYS_FALLBACK, KOREAN_HOLIDAYS } from './year_holidays';
+import { HOLIDAYS_FALLBACK, KOREAN_HOLIDAYS } from './year_holidays/index.js';
 
 function getYmdByDate(date: Date): { year: number; month: number; day: number } {
   return {

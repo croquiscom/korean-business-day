@@ -6,7 +6,7 @@
     "strict": true,
     "stripInternal": true,
     "declaration": true,
-    "module": "CommonJS",
+    "module": "ESNext",
     "esModuleInterop": true,
     "lib": ["es6"]
   }
