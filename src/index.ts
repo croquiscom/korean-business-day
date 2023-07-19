@@ -36,11 +36,12 @@ function getBusinessDay({
       continue;
     }
     const ymd = getYmdByDate(date);
-    const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] || HOLIDAYS_FALLBACK;
-    if (!holiday_of_year[ymd.month]) {
+    const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] ?? HOLIDAYS_FALLBACK;
+    const holiday_of_month = holiday_of_year[ymd.month];
+    if (!holiday_of_month) {
       throw new Error(`month ${ymd.month} data not exists`);
     }
-    if (holiday_of_year[ymd.month][ymd.day]) {
+    if (holiday_of_month[ymd.day]) {
       continue;
     }
     days_to_go--;
@@ -59,8 +60,9 @@ export function isHoliday(date: Date): boolean {
   date.setUTCHours(date.getUTCHours() + 9);
   const day = date.getDay();
   const ymd = getYmdByDate(date);
-  const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] || HOLIDAYS_FALLBACK;
-  const result = holiday_of_year[ymd.month][ymd.day] !== undefined;
+  const holiday_of_year = KOREAN_HOLIDAYS[ymd.year] ?? HOLIDAYS_FALLBACK;
+  const holiday_of_month = holiday_of_year[ymd.month];
+  const result = holiday_of_month?.[ymd.day] !== undefined;
   return day === 0 || day === 6 || result;
 }
 

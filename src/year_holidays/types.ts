@@ -1,3 +1,1 @@
-export interface IYearHolidays {
-  [month: number]: { [day: number]: boolean };
-}
+export type IYearHolidays = Record<number, Record<number, boolean | undefined> | undefined>;

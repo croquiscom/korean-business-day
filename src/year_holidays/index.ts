@@ -6,7 +6,7 @@ import { HOLIDAYS_2023 } from './2023';
 import { IYearHolidays } from './types';
 
 // 토, 일요일 정보는 포함하지 않음
-export const KOREAN_HOLIDAYS: { [year: number]: IYearHolidays } = {
+export const KOREAN_HOLIDAYS: Record<number, IYearHolidays | undefined> = {
   2019: HOLIDAYS_2019,
   2020: HOLIDAYS_2020,
   2021: HOLIDAYS_2021,
