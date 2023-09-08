@@ -32,6 +32,7 @@ export const HOLIDAYS_2023: IYearHolidays = {
     30: true, // 추석 연휴
   },
   10: {
+    2: true, // 추석 임시공휴일
     3: true, // 개천절
     9: true, // 한글날
   },
