@@ -45,4 +45,4 @@ UTC 시간대의 Date 인스턴스를 입력으로 받아 영업일 기준 n일 
 
 # 라이선스
 
-MIT licenses. [LICENSE](https://github.com/croquiscom/korean-business-day/blob/master/LICENSE)를 참고하세요.
+MIT licenses. [LICENSE](https://github.com/croquiscom/korean-business-day/blob/main/LICENSE)를 참고하세요.
