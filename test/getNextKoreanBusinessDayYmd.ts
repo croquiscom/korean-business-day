@@ -40,6 +40,11 @@ describe('getNextKoreanBusinessDayYmd', () => {
       expect(getNextKoreanBusinessDayYmd(20230915, 17)).to.eql(20231017);
     });
 
+    it('2024', () => {
+      expect(getNextKoreanBusinessDayYmd(20240430, 4)).to.eql(20240508);
+      expect(getNextKoreanBusinessDayYmd(20240911, 17)).to.eql(20241011);
+    });
+
     it('fallback year', () => {
       expect(getNextKoreanBusinessDayYmd(20500531, 4)).to.eql(20500607);
       expect(getNextKoreanBusinessDayYmd(20500915, 17)).to.eql(20501011);
