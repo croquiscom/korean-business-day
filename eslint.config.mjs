@@ -1,7 +1,8 @@
 import baseConfig from '@croquiscom/eslint-config/requiring-type-checking.mjs';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
   ...baseConfig,
   {
     languageOptions: {
@@ -32,7 +33,7 @@ export default [
       '@typescript-eslint/restrict-template-expressions': 'off',
     },
   },
-].map((config) => ({
-  ...config,
-  ignores: ['eslint.config.mjs', 'lib/**'],
-}));
+  {
+    ignores: ['eslint.config.mjs', 'lib/**'],
+  },
+);
