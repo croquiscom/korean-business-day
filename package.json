@@ -25,7 +25,7 @@
     "doc": "./builddoc.sh",
     "lint": "eslint .",
     "test:type": "tsc --noEmit",
-    "test:unit": "NODE_OPTIONS='--loader ts-node/esm/transpile-only' mocha ./test/*.ts",
+    "test:unit": "mocha -n import=tsx ./test/*.ts",
     "test": "npm run test:type && npm run lint && npm run test:unit --",
     "prepare": "husky"
   },
@@ -41,7 +41,7 @@
     "post-merge-install": "^0.4.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
     "typedoc": "^0.26.10",
     "typescript": "^5.6.3"
   },
