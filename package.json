@@ -45,15 +45,8 @@
     "typedoc": "^0.26.10",
     "typescript": "^5.6.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-merge": "post-merge-install",
-      "post-rebase": "post-merge-install"
-    }
-  },
   "lint-staged": {
-    "**/*.{js,ts}": "eslint",
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,ts}": "eslint",
+    "*": "prettier --write --ignore-unknown"
   }
 }
