@@ -1,5 +1,6 @@
-[![npm version](https://badge.fury.io/js/korean-business-day.svg)](http://badge.fury.io/js/korean-business-day)
+[![npm version](https://badge.fury.io/js/korean-business-day.svg)](https://badge.fury.io/js/korean-business-day)
 ![test](https://github.com/croquiscom/korean-business-day/workflows/test/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/croquiscom/korean-business-day/badge.svg?branch=main)](https://coveralls.io/github/croquiscom/korean-business-day?branch=main)
 
 korean-business-day는 영업일(한국 기준) 계산을 도와주는 모듈입니다.
 
