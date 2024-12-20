@@ -27,9 +27,12 @@
     "test:type": "tsc --noEmit",
     "test:unit": "mocha -n import=tsx ./test/*.ts",
     "test": "npm run test:type && npm run lint && npm run test:unit --",
-    "prepare": "husky"
+    "prepare": "husky",
+    "changeset": "changeset",
+    "release": "npm run lint && npm run build && npm run changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.11",
     "@croquiscom/eslint-config": "^3.1.0",
     "@types/chai": "^5.0.1",
     "@types/mocha": "^10.0.10",
