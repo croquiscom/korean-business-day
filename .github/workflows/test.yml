@@ -25,14 +25,8 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Check compile error
-        run: npm run test:type
-
-      - name: Check lint error
-        run: npm run lint
-
-      - name: Run unit test
-        run: npm run test:unit
+      - name: Run test
+        run: npm run test:cov
 
       - name: Check file changes
         run: |
@@ -42,3 +36,8 @@ jobs:
           git status --short
           git diff
           git diff --quiet
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
