@@ -27,6 +27,7 @@
     "test:type": "tsc --noEmit",
     "test:unit": "mocha -n import=tsx ./test/*.ts",
     "test": "npm run test:type && npm run lint && npm run test:unit --",
+    "test:cov": "c8 npm run test",
     "prepare": "husky",
     "changeset": "changeset",
     "release": "npm run lint && npm run build && npm run changeset publish"
@@ -36,6 +37,7 @@
     "@croquiscom/eslint-config": "^3.1.0",
     "@types/chai": "^5.0.1",
     "@types/mocha": "^10.0.10",
+    "c8": "^10.1.3",
     "chai": "^5.1.2",
     "eslint": "^9.17.0",
     "husky": "^9.1.7",
@@ -47,6 +49,14 @@
     "tsx": "^4.19.2",
     "typedoc": "^0.27.5",
     "typescript": "^5.7.2"
+  },
+  "c8": {
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "lcov"
+    ]
   },
   "lint-staged": {
     "*.{js,ts}": "eslint",
