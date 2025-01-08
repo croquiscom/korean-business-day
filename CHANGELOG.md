@@ -1,5 +1,11 @@
 # korean-business-day
 
+## 3.6.0
+
+### Minor Changes
+
+- 14e7a81: 2025년 설 임시공휴일 반영
+
 ## 3.5.0
 
 ### Minor Changes
