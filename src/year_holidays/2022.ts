@@ -3,11 +3,11 @@ import { IYearHolidays } from './types.js';
 export const HOLIDAYS_2022: IYearHolidays = {
   1: {
     1: true, // 새해
-    31: true, // 설날 연휴
+    31: true, // 설 연휴
   },
   2: {
-    1: true, // 설날
-    2: true, // 설날 연휴
+    1: true, // 설
+    2: true, // 설 연휴
   },
   3: {
     1: true, // 삼일절

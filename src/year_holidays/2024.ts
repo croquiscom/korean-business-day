@@ -5,9 +5,9 @@ export const HOLIDAYS_2024: IYearHolidays = {
     1: true, // 새해
   },
   2: {
-    9: true, // 설날 연휴
-    10: true, // 설날
-    11: true, // 설날 연휴
+    9: true, // 설 연휴
+    10: true, // 설
+    11: true, // 설 연휴
     12: true, // 대체공휴일
   },
   3: {

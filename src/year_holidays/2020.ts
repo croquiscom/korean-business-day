@@ -3,9 +3,9 @@ import { IYearHolidays } from './types.js';
 export const HOLIDAYS_2020: IYearHolidays = {
   1: {
     1: true, // 신정
-    24: true, // 설날 연휴
-    25: true, // 설날
-    26: true, // 설날 연휴
+    24: true, // 설 연휴
+    25: true, // 설
+    26: true, // 설 연휴
     27: true, // 대체 휴일
   },
   2: {},
