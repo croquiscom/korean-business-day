@@ -20,6 +20,7 @@ export const HOLIDAYS_2025: IYearHolidays = {
     6: true, // 부처님 오신날 대체공휴일
   },
   6: {
+    3: true, // 21대 대통령 선거
     6: true, // 현충일
   },
   7: {},
