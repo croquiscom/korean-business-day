@@ -1,5 +1,11 @@
 # korean-business-day
 
+## 3.7.0
+
+### Minor Changes
+
+- d351b07: 21대 대통령 선거 추가
+
 ## 3.6.0
 
 ### Minor Changes
