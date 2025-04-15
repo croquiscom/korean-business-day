@@ -33,22 +33,22 @@
     "release": "npm run lint && npm run build && npm run changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.11",
-    "@croquiscom/eslint-config": "^3.1.0",
-    "@types/chai": "^5.0.1",
+    "@changesets/cli": "^2.29.0",
+    "@croquiscom/eslint-config": "^3.2.0",
+    "@types/chai": "^5.2.1",
     "@types/mocha": "^10.0.10",
     "c8": "^10.1.3",
-    "chai": "^5.1.2",
-    "eslint": "^9.17.0",
+    "chai": "^5.2.0",
+    "eslint": "^9.24.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
-    "mocha": "^11.0.1",
+    "lint-staged": "^15.5.1",
+    "mocha": "^11.1.0",
     "post-merge-install": "^0.4.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
-    "tsx": "^4.19.2",
-    "typedoc": "^0.27.5",
-    "typescript": "^5.7.2"
+    "tsx": "^4.19.3",
+    "typedoc": "^0.28.2",
+    "typescript": "^5.8.3"
   },
   "c8": {
     "extension": [
