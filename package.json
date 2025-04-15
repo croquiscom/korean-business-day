@@ -1,6 +1,6 @@
 {
   "name": "korean-business-day",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "description": "Node module for korean business days",
   "type": "module",
   "main": "./lib/cjs/index.js",
