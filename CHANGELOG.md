@@ -1,5 +1,11 @@
 # korean-business-day
 
+## 3.8.0
+
+### Minor Changes
+
+- 35b37bb: 2026년 공휴일 정보 추가
+
 ## 3.7.0
 
 ### Minor Changes
