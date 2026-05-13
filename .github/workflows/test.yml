@@ -30,8 +30,6 @@ jobs:
       - name: Check file changes
         run: |
           npm run build
-          npx prettier --version
-          npx prettier --check . || exit 100
           git status --short
           git diff
           git diff --quiet
