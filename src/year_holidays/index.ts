@@ -6,7 +6,7 @@ import { HOLIDAYS_2023 } from './2023.js';
 import { HOLIDAYS_2024 } from './2024.js';
 import { HOLIDAYS_2025 } from './2025.js';
 import { HOLIDAYS_2026 } from './2026.js';
-import { IYearHolidays } from './types.js';
+import type { IYearHolidays } from './types.js';
 
 // 토, 일요일 정보는 포함하지 않음
 export const KOREAN_HOLIDAYS: Record<number, IYearHolidays | undefined> = {

@@ -1,4 +1,4 @@
-import { IYearHolidays } from './types.js';
+import type { IYearHolidays } from './types.js';
 
 export const HOLIDAYS_2023: IYearHolidays = {
   1: {
