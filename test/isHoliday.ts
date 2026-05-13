@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, test } from 'vitest';
 import { isHoliday } from '../src/index.js';
 
 function parse(str: string) {
@@ -8,26 +8,24 @@ function parse(str: string) {
   return new Date(y, m - 1, d);
 }
 
-describe('isHoliday', () => {
-  it('토요일인 경우', () => {
-    expect(isHoliday(parse('20200509'))).to.eql(true);
-    expect(isHoliday(parse('20200516'))).to.eql(true);
-  });
+test('토요일인 경우', () => {
+  expect(isHoliday(parse('20200509'))).toEqual(true);
+  expect(isHoliday(parse('20200516'))).toEqual(true);
+});
 
-  it('일요일인 경우', () => {
-    expect(isHoliday(parse('20200510'))).to.eql(true);
-    expect(isHoliday(parse('20200517'))).to.eql(true);
-  });
+test('일요일인 경우', () => {
+  expect(isHoliday(parse('20200510'))).toEqual(true);
+  expect(isHoliday(parse('20200517'))).toEqual(true);
+});
 
-  it('공휴일인 경우', () => {
-    expect(isHoliday(parse('20200505'))).to.eql(true);
-    expect(isHoliday(parse('20200815'))).to.eql(true);
-  });
+test('공휴일인 경우', () => {
+  expect(isHoliday(parse('20200505'))).toEqual(true);
+  expect(isHoliday(parse('20200815'))).toEqual(true);
+});
 
-  it('평일인 경우', () => {
-    expect(isHoliday(parse('20200504'))).to.eql(false);
-    expect(isHoliday(parse('20200506'))).to.eql(false);
-    expect(isHoliday(parse('20200507'))).to.eql(false);
-    expect(isHoliday(parse('20200508'))).to.eql(false);
-  });
+test('평일인 경우', () => {
+  expect(isHoliday(parse('20200504'))).toEqual(false);
+  expect(isHoliday(parse('20200506'))).toEqual(false);
+  expect(isHoliday(parse('20200507'))).toEqual(false);
+  expect(isHoliday(parse('20200508'))).toEqual(false);
 });

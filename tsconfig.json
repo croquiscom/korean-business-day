@@ -6,7 +6,8 @@
     "strict": true,
     "stripInternal": true,
     "declaration": true,
-    "module": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "lib": ["es6"]
