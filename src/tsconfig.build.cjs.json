@@ -2,6 +2,7 @@
   "extends": "../tsconfig",
   "compilerOptions": {
     "module": "CommonJS",
+    "moduleResolution": "node10",
     "outDir": "../lib/cjs"
   }
 }
