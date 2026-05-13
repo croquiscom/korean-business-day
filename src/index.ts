@@ -1,5 +1,11 @@
 import { HOLIDAYS_FALLBACK, KOREAN_HOLIDAYS } from './year_holidays/index.js';
 
+export interface IKoreanHoliday {
+  date: string;
+  name: string;
+  ymd: number;
+}
+
 function getYmdByDate(date: Date): { year: number; month: number; day: number } {
   return {
     day: date.getDate(),
@@ -8,10 +14,14 @@ function getYmdByDate(date: Date): { year: number; month: number; day: number } 
   };
 }
 
-function getDateFromDayYmd(day_ymd: number) {
+function validateDayYmd(day_ymd: number) {
   if (!/^20[0-9][0-9](0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(String(day_ymd))) {
     throw new Error(`invalid day_ymd: ${day_ymd}`);
   }
+}
+
+function getDateFromDayYmd(day_ymd: number) {
+  validateDayYmd(day_ymd);
   const day_m = `0${Math.floor((day_ymd / 100) % 100)}`.slice(-2);
   const day_d = `0${Math.floor(day_ymd % 100)}`.slice(-2);
   return new Date(`${Math.floor(day_ymd / 10000)}-${day_m}-${day_d}T09:00:00+09:00`);
@@ -124,4 +134,50 @@ export function getPreviousKoreanBusinessDayYmdByUtcDate(date: Date, days_before
     days_to_go: days_before,
     set_date_increased: false,
   });
+}
+
+/**
+ * 지정된 기간 내의 공휴일 목록을 반환합니다.
+ * 데이터가 없는 연도는 HOLIDAYS_FALLBACK을 참고합니다.
+ * @param from_ymd 시작일(YYYYMMDD 형태의 숫자, 포함)
+ * @param to_ymd 종료일(YYYYMMDD 형태의 숫자, 포함)
+ * @returns 공휴일 목록 (날짜 오름차순)
+ */
+export function getKoreanHolidaysInRange(from_ymd: number, to_ymd: number): IKoreanHoliday[] {
+  validateDayYmd(from_ymd);
+  validateDayYmd(to_ymd);
+  if (from_ymd > to_ymd) {
+    throw new Error(`from_ymd should not be greater than to_ymd`);
+  }
+
+  const result: IKoreanHoliday[] = [];
+  const from_year = Math.floor(from_ymd / 10000);
+  const to_year = Math.floor(to_ymd / 10000);
+
+  for (let year = from_year; year <= to_year; year++) {
+    const holidays_of_year = KOREAN_HOLIDAYS[year] ?? HOLIDAYS_FALLBACK;
+    for (let month = 1; month <= 12; month++) {
+      const holidays_of_month = holidays_of_year[month];
+      if (!holidays_of_month) {
+        continue;
+      }
+      for (const day_str in holidays_of_month) {
+        const name = holidays_of_month[Number(day_str)];
+        if (name == null) {
+          continue;
+        }
+        const day = Number(day_str);
+        const ymd = year * 10000 + month * 100 + day;
+        if (ymd < from_ymd || ymd > to_ymd) {
+          continue;
+        }
+        const day_m = `0${month}`.slice(-2);
+        const day_d = `0${day}`.slice(-2);
+        result.push({ date: `${year}-${day_m}-${day_d}`, name, ymd });
+      }
+    }
+  }
+
+  result.sort((a, b) => a.ymd - b.ymd);
+  return result;
 }

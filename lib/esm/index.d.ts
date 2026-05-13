@@ -1,3 +1,8 @@
+export interface IKoreanHoliday {
+    date: string;
+    name: string;
+    ymd: number;
+}
 /**
  * 휴일 여부를 반환합니다.
  * @param date 살펴볼 날짜
@@ -32,3 +37,11 @@ export declare function getNextKoreanBusinessDayYmdByUtcDate(date: Date, days_af
  * @returns 이전 영업일(YYYYMMDD 형태의 숫자)
  */
 export declare function getPreviousKoreanBusinessDayYmdByUtcDate(date: Date, days_before: number): number;
+/**
+ * 지정된 기간 내의 공휴일 목록을 반환합니다.
+ * 데이터가 없는 연도는 HOLIDAYS_FALLBACK을 참고합니다.
+ * @param from_ymd 시작일(YYYYMMDD 형태의 숫자, 포함)
+ * @param to_ymd 종료일(YYYYMMDD 형태의 숫자, 포함)
+ * @returns 공휴일 목록 (날짜 오름차순)
+ */
+export declare function getKoreanHolidaysInRange(from_ymd: number, to_ymd: number): IKoreanHoliday[];

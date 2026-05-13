@@ -1,1 +1,1 @@
-export type IYearHolidays = Record<number, Record<number, boolean | undefined> | undefined>;
+export type IYearHolidays = Record<number, Record<number, string | undefined> | undefined>;
