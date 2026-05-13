@@ -1,5 +1,15 @@
 # korean-business-day
 
+## 4.0.0
+
+### Major Changes
+
+- b238d94: 기간 내 공휴일 목록을 반환하는 getKoreanHolidaysInRange API 추가
+
+### Minor Changes
+
+- b238d94: 제헌절 공휴일 추가
+
 ## 3.8.0
 
 ### Minor Changes
