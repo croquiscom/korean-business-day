@@ -16,7 +16,9 @@ const HOLIDAYS_FALLBACK: IYearHolidays = {
   6: {
     6: true, // 현충일
   },
-  7: {},
+  7: {
+    17: true, // 제헌절
+  },
   8: {
     15: true, // 광복절
   },
